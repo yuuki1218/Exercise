@@ -11205,5 +11205,10 @@ img {
   .pb-lg {
     padding-bottom: 150px !important;
   }
+
+  .title__main-title {
+    margin: 29px 0;
+    font-size: 3rem;
+  }
 }
 

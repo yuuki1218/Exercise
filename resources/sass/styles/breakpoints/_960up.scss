@@ -24,3 +24,10 @@
 //         display: block;
 //     }
 // }
+
+.title {
+    &__main-title {
+        margin: 29px 0;
+        font-size: 3rem;
+    }
+}
