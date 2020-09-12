@@ -1,0 +1,93 @@
+.navgation-bar {
+    background-color: #C0C0C0;
+    height: 42px;
+    margin-bottom: 68px;
+}
+
+.ml-auto, .mx-auto {
+    float: right;
+    margin-top: -44px;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 10rem;
+    font-size: 16px;
+    color: #fff;
+}
+
+header h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2.25rem;
+        text-align: center;
+        color: #fff;
+        padding: 6px 0;
+}
+
+.day-blank {
+    background-color: #efefef;
+}
+.calendar table td {
+    padding: 3px;
+    border: solid 1px #999;
+}
+.calendar table td:before {
+    display: block;
+    float: left;
+    height: 50px;
+    content: "";
+}
+.calendar table th {
+    text-align: center;
+    border:solid 1px #999;
+    font-size: 13px;
+    width: 13%;
+}
+
+.calendar span.day {
+    font-size: 14px;
+}
+
+.calendar p.item {
+    font-size: 12px;
+}
+
+.item {
+    font-size: 21px;
+    margin: 18px 0;
+}
+
+.date {
+    font-size: 21px;
+    margin: 18px 0;
+}
+
+
+input#date {
+    padding: 15px;
+    font-size: 15px;
+}
+
+.submit-button {
+    margin-top: 62px;
+}
+
+input.form-control.submit {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+a.btn.btn-outline-secondary.float-left {
+    font-size: 13px;
+    margin-left: 49px;
+    margin-top: 9px;
+}
+
+a.btn.btn-outline-secondary.float-right {
+    font-size: 13px;
+    margin-right: 53px;
+    margin-top: 9px;
+}
+
+span.date-title {
+    font-size: 28px;
+}

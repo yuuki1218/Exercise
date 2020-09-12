@@ -1,0 +1,53 @@
+/* h1 {
+    text-align: center;
+    font-size: 32px;
+    font-family: "Ubuntu", sans-serif;
+    position: absolute;
+    color: #fff;
+    top: 30px;
+    left: 2rem;
+}
+
+.information-area {
+    border-radius: 4px;
+    margin: 0px 11rem 34px 11rem;
+    text-align: left;
+}
+.inner {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 16px;
+}
+p {
+    padding: 0px 0 19px 13px;
+    font-size: 15px;
+}
+
+.photo {
+    height: 500px;
+    width: 500px;
+    background: url("../img/sports-731506_1920.jpg");
+    position: relative;
+    margin-top: 63px;
+    box-shadow: 0 0 10px;
+}
+
+@media screen and (min-width: 800px) {
+    .photo {
+        background-image: url(img/sports-731506_1280.jpg);
+    }
+}
+@media screen and (min-width: 480px) {
+}
+
+.login-button {
+    display: inline;
+    margin: 0 0 0 10rem;
+}
+
+.register-button {
+    display: inline;
+    margin: 0 0 0 23rem;
+} */
