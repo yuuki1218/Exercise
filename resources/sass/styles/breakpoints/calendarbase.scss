@@ -1,0 +1,32 @@
+body {
+    font-family: "Ubuntu", "Kosugi Maru", sans-serif;
+}
+
+.font-sm {
+    font-size: 14px;
+}
+.font-lg {
+    font-size: 25px;
+}
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+.mb-lg {
+    margin-bottom: 80px !important;
+}
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+.pb-lg {
+    padding-bottom: 80px !important;
+}
+
+.conten-width {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1070px;
+}
+
+section {
+    padding: 30px;
+}

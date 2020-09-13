@@ -8,7 +8,7 @@
 @import "modules/mixin";
 
 //view
-@import "breakpoints/base";
+@import "breakpoints/calendarbase";
 @media (min-width: 960px) {
     @import "breakpoints/960up";
 }
