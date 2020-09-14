@@ -3,62 +3,73 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>@yield('title')</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/calendar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles/calendarstyles.css') }}" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('js/scroll-polyfill.js') }}"></script>
+    <script src="{{ asset('js/scroll.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navgation-bar">
-            <div class="nav-list">
-                <a href="{{ route('home') }}">
-                    <h1>One Step</h1>
-                </a>
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+    <div class="global-container">
+        <div class="nav-trigger"></div>
+        <header class="header">
+            <div class="header__inner">
+                <div class="header__title">
+                    <h1 class="header__home-title">
+                        <a class="header__home-link" href="{{ url('/') }}">
+                            One Step
+                        </a>
+                    </h1>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__ul">
+                        @guest
+                            <li class="header__li">
+                                <a class="header__btn" href="{{ route('login') }}">ログイン</a>
                             </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                                                                                                                                         document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                            <li class=" header__li">
+                                <a class="header__btn" href="{{ route('register') }}">新規登録</a>
+                            </li>
+                        @else
+                            <li class="header__li">
+                                <a class="header__nav-username">
+                                    {{ Auth::user()->name }}
                                 </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            </li>
+                            <li class="header__li">
+                                <a id="header__nav-logout" action="{{ route('logout') }}" method="POST">
                                     @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-                </ul>
+                                    ログアウト
+                                </a>
+                            </li>
+                        @endguest
+                    </ul>
+                </nav>
             </div>
-        </nav>
-    </header>
-    <main>
-        @yield('content')
-    </main>
+        </header>
+        <div id="content">
+            <main>
+                @yield('content')
+            </main>
+        </div>
+    </div>
 </body>
 
 </html>

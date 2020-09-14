@@ -2,38 +2,37 @@
 @section('content')
 @section('title', '習慣の選択画面')
     {{-- 習慣の選択画面表示 --}}
-    <div class="container">
-        <h1>習慣の選択画面</h1>
-        <div class="goal-area">
+    <section class="habits">
+        <div class="habits__inner">
+            <h1 class="habits__content-title">習慣の選択画面</h1>
             @foreach ($calendars as $calendar)
                 @if ($calendar->user_id === Auth::user()->id)
-                    <div class="item">
-                        <h2>習慣の項目</h2>
-                        <a href="{{ route('calendar.show', ['calendar' => $calendar->id]) }}">
-                            <p>{{ $calendar->title }}</p>
-                        </a>
-                    </div>
-                    <a href="{{ route('calendar.edit', ['calendar' => $calendar->id]) }}">
-                        <div class="edit-button">
-                            <button class="btn btn-secondary">修正</button>
+                    <div class="habits__items">
+                        <div class="habits__title">
+                            <a class="habits__link" href="{{ route('calendar.show', ['calendar' => $calendar->id]) }}">
+                                <p class="habits__title">{{ $calendar->title }}</p>
+                            </a>
+                        </div>
+                        <div class="habits__btn">
+                            <a href="{{ route('calendar.edit', ['calendar' => $calendar->id]) }}">
+                                <button class="btn edit-btn btn-secondary">修正</button>
+                            </a>
+                            <form action="{{ route('calendar.destroy', ['calendar' => $calendar->id]) }}" method="POST"
+                                enctype="multipart/form-data">
+                                @csrf
+                                @method('delete')
+                                <input type="hidden" name="id" value="{{ $calendar->id }}">
+                                <button class="btn delete-btn btn-danger">削除</button>
                             </form>
                         </div>
-                        <form action="{{ route('calendar.destroy', ['calendar' => $calendar->id]) }}" method="POST"
-                            enctype="multipart/form-data">
-                            @csrf
-                            @method('delete')
-                            <input type="hidden" name="id" value="{{ $calendar->id }}">
-                            <div class="delete-button">
-                                <button class="btn btn-danger">削除</button>
-                            </div>
-                        </form>
+                    </div>
                 @endif
             @endforeach
         </div>
-        <div class="create-calendar">
+        <div class="calendar-create__button">
             <form action="{{ route('calendar.create') }}">
-                <button class="btn btn-primary" type="submit">カレンダーを作成</button>
+                <button class="btn btn-primary btn-lg" type="submit">カレンダーを作成</button>
             </form>
         </div>
-    </div>
+    </section>
 @endsection

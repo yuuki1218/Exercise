@@ -2,43 +2,55 @@
 @section('content')
 @section('title', '習慣')
 
-    {{-- カレンダー表示 --}}
-    <div>{!! $calendar_tag !!}</div>
-
     {{-- 目標設定表示 --}}
-    <div class="goal-area">
-        <div class="item">
-            <p>習慣の項目</p>
-            <p>{{ $calendar->title }}</p>
+    <section class="goal">
+        <div class="goal__inner">
+            <div class="goal__items">
+                <div class="goal__item">
+                    <p>行いたい習慣</p>
+                    <p>{{ $calendar->title }}</p>
+                </div>
+                <div class="goal__item">
+                    <p>目標</p>
+                    <p>{{ $calendar->goal }}</p>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <p>行動</p>
-            <p>{{ $calendar->line }}</p>
+    </section>
+
+    {{-- カレンダー表示 --}}
+    <section class="calendar">
+        <div>{!! $calendar_tag !!}</div>
+    </section>
+    <section class="action">
+        <div class="action__inner">
+            <div class="action__items">
+                <div class="action__item">
+                    <p>行動</p>
+                    <p>{{ $calendar->line }}</p>
+                </div>
+                <div class="action__item">
+                    <p>最低ライン</p>
+                    <p>{{ $calendar->lowest_line }}</p>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <p>最低ライン</p>
-            <p>{{ $calendar->lowest_line }}</p>
-        </div>
-        <div class="item">
-            <p>目標</p>
-            <p>{{ $calendar->goal }}</p>
-        </div>
-    </div>
+    </section>
 
     <!-- 記録入力フォーム -->
-    <form action="{{ route('record.calendar', ['calendarId' => $calendar->id]) }}" method="POST"
-        enctype="multipart/form-data">
-        @csrf
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-        <div class="container">
+    <section class="record">
+        <form action="{{ route('record.calendar', ['calendarId' => $calendar->id]) }}" method="POST"
+            enctype="multipart/form-data">
+            @csrf
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="row">
                 <div class="col-md-4">
                     <label for="done" class="row done">習慣は行いましたか？</label>
@@ -68,9 +80,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </form>
+            </div>
+            </div>
+        </form>
+    </section>
     <script>
         $(function() {
             $("#date").datepicker({

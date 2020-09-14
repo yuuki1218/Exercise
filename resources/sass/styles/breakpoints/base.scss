@@ -71,6 +71,7 @@ img {
         align-items: center;
         padding: 0;
         margin: 0;
+        font-size: 26px;
 
         & > a {
             color: $cH1;
@@ -96,7 +97,7 @@ img {
 
     &__li {
         padding: 0;
-        margin: 10px 20px;
+        margin-left: 19px;
         @extend .font-sm;
 
         & > a {
