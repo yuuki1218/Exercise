@@ -10936,9 +10936,8 @@ body {
 .conten-width,
 .action__inner,
 .goal__inner,
-.calendar-create__form,
-.header__inner,
-#content {
+.calendar-create__goal-create,
+.header__inner {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -10956,6 +10955,13 @@ section.calendar {
   padding-top: 60px;
 }
 
+.submit-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -10965,7 +10971,7 @@ section.calendar {
   background-color: #cfcdcd;
   display: flex;
   align-items: center;
-  z-index: 100;
+  z-index: 300;
   transition: all 0.3s;
 }
 
@@ -11053,15 +11059,70 @@ section.calendar {
   text-align: center;
 }
 
+.calendar-create__form {
+  max-width: 1070px;
+}
+
+.calendar-create__form .form-group {
+  margin: 0;
+}
+
+.calendar-create__form .form-control {
+  padding: 5px 0;
+  width: 76%;
+}
+
 .calendar-create__content-title {
   text-align: center;
   border-bottom: 2px solid;
   margin-bottom: 17px;
 }
 
+.calendar-create__title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .calendar-create__label {
-  font-size: 15px;
-  margin: 8px 0;
+  font-size: 13px;
+  margin: 0;
+  width: 23%;
+}
+
+.calendar-create__help {
+  text-align: right;
+}
+
+.calendar-create__exercise-choice {
+  margin-bottom: 250px;
+}
+
+.calendar-create__chioce-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calendar-create__exercise-items {
+  border: 1px solid;
+  text-align: center;
+  flex-basis: 26%;
+  margin: 4px 9px;
+}
+
+.calendar-create__exercise-name {
+  margin: 0px;
+  padding: 18px 0;
+}
+
+.calendar-create__goal-create {
+  position: fixed;
+  z-index: 200;
+  top: 31rem;
+  left: 18px;
+  padding-top: 30px;
+  background-color: #fff;
 }
 
 .calendar-create__btn-inner {
@@ -11072,10 +11133,6 @@ section.calendar {
 
 .calendar-create__btn-inner .exit-button {
   margin-top: 5px;
-}
-
-.form-control {
-  padding: 16px 0;
 }
 
 .goal {

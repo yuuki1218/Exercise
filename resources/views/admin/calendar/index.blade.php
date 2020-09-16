@@ -10,7 +10,7 @@
                     <div class="habits__items">
                         <div class="habits__title">
                             <a class="habits__link" href="{{ route('calendar.show', ['calendar' => $calendar->id]) }}">
-                                <p class="habits__title">{{ $calendar->title }}</p>
+                                <p class="habits__title">{{ $calendar->exercise_name }}</p>
                             </a>
                         </div>
                         <div class="habits__btn">

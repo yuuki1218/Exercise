@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Calendar extends Model
 {
     protected $fillable = [
-        'title', 'line', 'lowest_line', 'goal'
+        'exercise_name', 'line', 'lowest_line', 'goal'
     ];
 
     protected $guarded = [
@@ -22,5 +22,10 @@ class Calendar extends Model
     public function records()
     {
         return $this->hasMany('App\Models\Record');
+    }
+
+    public function exercise()
+    {
+        return $this->belongsTo('App\Models\Exercise');
     }
 }

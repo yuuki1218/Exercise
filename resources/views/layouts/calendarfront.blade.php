@@ -53,12 +53,12 @@
                                     {{ Auth::user()->name }}
                                 </a>
                             </li>
-                            <li class="header__li">
-                                <a id="header__nav-logout" action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                    ログアウト
-                                </a>
-                            </li>
+                            <form class="header__nav-logout" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <li class="header__li">
+                                    <input class="submit-btn" type="submit" value="ログアウト">
+                                </li>
+                            </form>
                         @endguest
                     </ul>
                 </nav>

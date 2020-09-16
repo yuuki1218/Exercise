@@ -8,6 +8,7 @@ use App\Calendar\CalendarView;
 use App\Http\Requests\CalendarRules;
 use App\Models\Record;
 use App\Models\Calendar;
+use App\Models\Exercise;
 
 class CalendarController extends Controller
 {
@@ -31,7 +32,8 @@ class CalendarController extends Controller
      */
     public function create()
     {
-        return view('admin.calendar.create');
+        $exercises = Exercise::all();
+        return view('admin.calendar.create', ['exercises' => $exercises]);
     }
 
     /**
@@ -44,7 +46,7 @@ class CalendarController extends Controller
     {
         $calendar = new Calendar();
         $calendar->user_id = $request->user()->id;
-        $calendar->title = $request->input('title');
+        $calendar->exercise_name = $request->input('exercise_name');
         $calendar->line = $request->input('line');
         $calendar->lowest_line = $request->input('lowest_line');
         $calendar->goal = $request->input('goal');
@@ -99,7 +101,7 @@ class CalendarController extends Controller
     public function update(Request $request, $calendarId)
     {
         $calendarItem = Calendar::findOrFail($calendarId);
-        $calendarItem->title = $request->input('title');
+        $calendarItem->exercise_name = $request->exercise()->name;
         $calendarItem->line = $request->input('line');
         $calendarItem->lowest_line = $request->input('lowest_line');
         $calendarItem->goal = $request->input('goal');

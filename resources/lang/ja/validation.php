@@ -147,8 +147,7 @@ return [
         'password' => 'パスワード',
 
         //カレンダー用
-        'title' => '項目',
-        'lowest_line' => '最低ライン',
+        'exercise_name' => '項目',
         'goal' => '目標'
     ],
 

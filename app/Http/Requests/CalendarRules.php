@@ -24,9 +24,9 @@ class CalendarRules extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:100',
-            'line' => 'max:200',
-            'lowest_line' => 'required|max:200',
+            'exercise_name' => 'required|max:30',
+            'line' => 'max:100',
+            'lowest_line' => '|max:100',
             'goal' => 'required|max:200',
         ];
     }
