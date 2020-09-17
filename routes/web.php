@@ -24,6 +24,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('record', 'RecordController')->only([
         'store', 'edit', 'update', 'destroy'
     ]);
+
+    //習慣項目作成
+    Route::resource('exercise', 'Admin\ExerciseController')->only([
+        'index', 'create', 'store', 'edit', 'update', 'destroy'
+    ]);
 });
 
 Auth::routes();

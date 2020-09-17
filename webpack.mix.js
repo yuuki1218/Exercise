@@ -13,7 +13,8 @@ const mix = require("laravel-mix");
 
 mix.js("resources/js/app.js", "public/js")
     .sass("resources/sass/styles/styles.scss", "public/css/styles")
-    .sass("resources/sass/styles/calendarstyles.scss", "public/css/styles");
+    .sass("resources/sass/styles/calendarstyles.scss", "public/css/styles")
+    .sass("resources/sass/styles/exercisestyles.scss", "public/css/styles");
 
 // .sass("resources/sass/styles/app.scss", "public/css")
 // .sass("resources/sass/styles/breakpoints", "public/css/styles/breakpoints");

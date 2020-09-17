@@ -47,6 +47,10 @@ section.calendar {
 input[type="radio"] {
     display: none;
 }
+a {
+    text-decoration: none;
+    list-style: none;
+}
 
 .header {
     position: fixed;
@@ -198,7 +202,7 @@ input[type="radio"] {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
     &__exercise-items {
         border: 1px solid;
@@ -206,23 +210,39 @@ input[type="radio"] {
         text-align: center;
         flex-basis: 26%;
         margin: 4px 9px;
+        width: 0;
+        height: 40px;
+
+        & .form-group {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
 
         & input[type="radio"]:checked + label {
-            margin: 0px;
-            padding: 18px 0;
             background-color: #3f51b5;
             border-color: #fff;
-            width: 100%;
+            height: 100%;
             color: #fff;
             transition: 0.4s;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
     }
 
+    &__exercise-form-link {
+        & i.fas.fa-cogs {
+            color: #000;
+            width: 100%;
+            padding: 7px 0;
+            font-size: 26px;
+        }
+    }
+
     &__exercise-name {
-        margin: 0px;
-        padding: 18px 0;
         width: 100%;
+        height: 100%;
+        word-wrap: break-word;
+        padding: 5px 0;
         cursor: pointer;
     }
 

@@ -1,0 +1,77 @@
+body {
+    font-family: "Ubuntu", "Kosugi Maru", sans-serif;
+}
+
+.font-sm {
+    font-size: 14px;
+}
+.font-lg {
+    font-size: 25px;
+}
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+.mb-lg {
+    margin-bottom: 80px !important;
+}
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+.pb-lg {
+    padding-bottom: 80px !important;
+}
+
+.conten-width {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1070px;
+}
+
+#content {
+    padding-top: $navHeight;
+}
+
+.submit-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.habits {
+    &__content-title {
+        letter-spacing: 7px;
+        border-bottom: 2px solid;
+        text-align: center;
+        margin-bottom: 52px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        color: #3f51b5;
+    }
+    &__inner {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+    }
+
+    &__item {
+        border-bottom: 2px solid;
+        margin-bottom: 24px;
+        margin-right: 2px;
+        color: #000;
+        border-color: #00000038;
+    }
+
+    &__item-name {
+        margin: 0;
+        font-size: 16px;
+    }
+}
