@@ -10962,13 +10962,17 @@ section.calendar {
   outline: none;
 }
 
+input[type=radio] {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #cfcdcd;
+  background-color: #1b85dad9;
   display: flex;
   align-items: center;
   z-index: 300;
@@ -11002,7 +11006,7 @@ section.calendar {
 }
 
 .header__home-link.triggered {
-  color: #cfcdcd;
+  color: #1b85dad9;
   transition: all 0.3s;
 }
 
@@ -11033,6 +11037,9 @@ section.calendar {
   border-bottom: 2px solid;
   text-align: center;
   margin-bottom: 52px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #3f51b5;
 }
 
 .habits__items {
@@ -11106,14 +11113,28 @@ section.calendar {
 
 .calendar-create__exercise-items {
   border: 1px solid;
+  border-radius: 5px;
   text-align: center;
   flex-basis: 26%;
   margin: 4px 9px;
 }
 
+.calendar-create__exercise-items input[type=radio]:checked + label {
+  margin: 0px;
+  padding: 18px 0;
+  background-color: #3f51b5;
+  border-color: #fff;
+  width: 100%;
+  color: #fff;
+  transition: 0.4s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .calendar-create__exercise-name {
   margin: 0px;
   padding: 18px 0;
+  width: 100%;
+  cursor: pointer;
 }
 
 .calendar-create__goal-create {
@@ -11121,7 +11142,9 @@ section.calendar {
   z-index: 200;
   top: 31rem;
   left: 18px;
-  padding-top: 30px;
+  top: 31rem;
+  left: 18px;
+  padding: 30px 0;
   background-color: #fff;
 }
 

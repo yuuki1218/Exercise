@@ -18,17 +18,18 @@
                         </ul>
                     </div>
                 @endif
-                <p class="calendar-create__label">習慣</p>
+                <label class="calendar-create__label">習慣</label>
                 <small id="exercise-nameHelp" class="form-text text-muted calendar-create__help ">行いたい習慣を選択してください。</small>
                 <div class="calendar-create__exercise-choice">
                     <div class="calendar-create__chioce-inner">
                         @foreach ($exercises as $exercise)
                             <div class="calendar-create__exercise-items">
                                 <div class="form-group">
-                                    <label class="calendar-create__exercise-name"
-                                        for="exercise_name{{ $exercise->id }}">{{ $exercise->name }}</label>
+                                    <input type="hidden" name="exercise_id" value="{{ $exercise->id }}">
                                     <input type="radio" name="exercise_name" id="exercise_name{{ $exercise->id }}"
-                                        class="form-control" value="{{ $exercise->name }}">
+                                        class="form-control" value="{{ $exercise->name }}" checked="checked"><label
+                                        class="calendar-create__exercise-name"
+                                        for="exercise_name{{ $exercise->id }}">{{ $exercise->name }}</label>
                                 </div>
                             </div>
                         @endforeach

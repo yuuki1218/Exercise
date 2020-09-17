@@ -46,6 +46,7 @@ class CalendarController extends Controller
     {
         $calendar = new Calendar();
         $calendar->user_id = $request->user()->id;
+        $calendar->exercise_id = $request->input('exercise_id');
         $calendar->exercise_name = $request->input('exercise_name');
         $calendar->line = $request->input('line');
         $calendar->lowest_line = $request->input('lowest_line');
