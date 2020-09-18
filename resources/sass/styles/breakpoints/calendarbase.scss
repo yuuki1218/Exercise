@@ -308,12 +308,10 @@ a {
     &__radio {
         & > input:checked ~ div.record__icon-star {
             color: rgb(241, 238, 20);
-            // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             transition: 0.3s;
         }
         & > input:checked ~ div.record__icon-times {
             color: red;
-            // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             transition: 0.3s;
         }
     }
