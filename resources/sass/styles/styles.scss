@@ -9,8 +9,6 @@
 
 //view
 @import "breakpoints/base";
-@import "breakpoints/calendarbase.scss";
-@import "breakpoints/exercisebase.scss";
 @media (min-width: 960px) {
     @import "breakpoints/960up";
 }

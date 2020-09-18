@@ -19,6 +19,9 @@
                         </a>
                     @endforeach
                 </div>
+                <div class="habits__btn">
+                    <a href="{{ route('calendar.create') }}" class="btn btn-primary">戻る</a>
+                </div>
             </div>
         </div>
     </section>
