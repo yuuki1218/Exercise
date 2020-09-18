@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ExerciseRules;
 use App\Models\Exercise;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,7 @@ class ExerciseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ExerciseRules $request)
     {
         $exercise = new Exercise();
         $exercise->name = $request->input('name');
@@ -60,9 +61,10 @@ class ExerciseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($exerciseId)
     {
-        //
+        $exercise = Exercise::findOrFail($exerciseId);
+        return view('admin.exercise.edit', ['exercise' => $exercise]);
     }
 
     /**
@@ -72,9 +74,12 @@ class ExerciseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ExerciseRules $request, $exerciseId)
     {
-        //
+        $exercise = Exercise::findOrFail($exerciseId);
+        $exercise->name = $request->input('name');
+        $exercise->save();
+        return redirect('admin/exercise');
     }
 
     /**
@@ -83,8 +88,10 @@ class ExerciseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($exerciseId)
     {
-        //
+        $exercise = Exercise::findOrFail($exerciseId);
+        $exercise->delete();
+        return redirect('admin/exercise');
     }
 }

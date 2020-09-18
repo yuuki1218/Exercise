@@ -12,7 +12,7 @@
                         </div>
                     </a>
                     @foreach ($exercises as $exercise)
-                        <a href="#" class="habits__item-link">
+                        <a href="{{ route('exercise.edit', ['exercise' => $exercise->id]) }}" class="habits__item-link">
                             <div class="habits__item">
                                 <p class="habits__item-name">{{ $exercise->name }}</p>
                             </div>

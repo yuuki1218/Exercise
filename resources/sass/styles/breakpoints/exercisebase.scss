@@ -47,6 +47,7 @@ a {
     list-style: none;
 }
 
+//習慣の一覧画面
 .habits {
     &__content-title {
         letter-spacing: 7px;
@@ -74,5 +75,42 @@ a {
     &__item-name {
         margin: 0;
         font-size: 16px;
+    }
+}
+
+// 習慣の作成・編集画面
+.habits-create {
+    &__container {
+        @extend .conten-width;
+    }
+
+    &__form {
+        & .form-group {
+            text-align: center;
+        }
+    }
+
+    &__item-name {
+        font-size: 15px;
+        letter-spacing: 8px;
+    }
+
+    &__text-form {
+        padding: 4px;
+        border: none;
+        border-bottom: 1px solid #00000040;
+    }
+
+    &__btn-inner {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+    }
+    &__create-btn {
+        margin-right: 17px;
+    }
+
+    &__delete-btn {
+        margin-top: 5px;
     }
 }
