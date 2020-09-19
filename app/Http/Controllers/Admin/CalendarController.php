@@ -30,9 +30,11 @@ class CalendarController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($userId)
     {
-        $exercises = Exercise::all();
+        // dd($userId);
+        $exercises = Exercise::where('user_id', $userId)->get();
+        // dd($exercises);
         return view('admin.calendar.create', ['exercises' => $exercises]);
     }
 

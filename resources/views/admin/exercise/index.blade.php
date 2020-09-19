@@ -12,11 +12,13 @@
                         </div>
                     </a>
                     @foreach ($exercises as $exercise)
-                        <a href="{{ route('exercise.edit', ['exercise' => $exercise->id]) }}" class="habits__item-link">
-                            <div class="habits__item">
-                                <p class="habits__item-name">{{ $exercise->name }}</p>
-                            </div>
-                        </a>
+                        @if ($exercise->user_id === Auth::user()->id)
+                            <a href="{{ route('exercise.edit', ['exercise' => $exercise->id]) }}" class="habits__item-link">
+                                <div class="habits__item">
+                                    <p class="habits__item-name">{{ $exercise->name }}</p>
+                                </div>
+                            </a>
+                        @endif
                     @endforeach
                 </div>
                 <div class="habits__btn">

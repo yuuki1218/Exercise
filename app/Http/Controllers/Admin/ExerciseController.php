@@ -39,9 +39,11 @@ class ExerciseController extends Controller
     public function store(ExerciseRules $request)
     {
         $exercise = new Exercise();
+        $exercise->user_id = $request->user()->id;
+        $userId = $exercise->user_id;
         $exercise->name = $request->input('name');
         $exercise->save();
-        return redirect('admin/exercise');
+        return redirect()->route('calendar.create.exercise', ['userId' => $userId]);
     }
 
     /**

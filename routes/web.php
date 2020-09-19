@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     //カレンダー作成用
+    Route::get('clandar/create/{userId}', 'Admin\CalendarController@create')->name('calendar.create.exercise');
     Route::resource('calendar', 'Admin\CalendarController');
 
     //記録用のコントローラー
@@ -24,6 +25,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('record', 'RecordController')->only([
         'store', 'edit', 'update', 'destroy'
     ]);
+
 
     //習慣項目作成
     Route::resource('exercise', 'Admin\ExerciseController')->only([

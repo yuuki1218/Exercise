@@ -29,15 +29,17 @@
                             </div>
                         </div>
                         @foreach ($exercises as $exercise)
-                            <div class="calendar-create__exercise-items">
-                                <div class="form-group">
-                                    <input type="hidden" name="exercise_id" value="{{ $exercise->id }}">
-                                    <input type="radio" name="exercise_name" id="exercise_name{{ $exercise->id }}"
-                                        class="form-control" value="{{ $exercise->name }}" checked="checked"><label
-                                        class="calendar-create__exercise-name"
-                                        for="exercise_name{{ $exercise->id }}">{{ $exercise->name }}</label>
+                            @if ($exercise->user_id === Auth::user()->id)
+                                <div class="calendar-create__exercise-items">
+                                    <div class="form-group">
+                                        <input type="hidden" name="exercise_id" value="{{ $exercise->id }}">
+                                        <input type="radio" name="exercise_name" id="exercise_name{{ $exercise->id }}"
+                                            class="form-control" value="{{ $exercise->name }}" checked="checked"><label
+                                            class="calendar-create__exercise-name"
+                                            for="exercise_name{{ $exercise->id }}">{{ $exercise->name }}</label>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                         @endforeach
                     </div>
                     <div class="calendar-create__goal-create">

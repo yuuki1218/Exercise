@@ -30,7 +30,7 @@
             @endforeach
         </div>
         <div class="calendar-create__button">
-            <form action="{{ route('calendar.create') }}">
+            <form action="{{ route('calendar.create.exercise', ['userId' => Auth::user()->id]) }}">
                 <button class="btn btn-primary btn-lg" type="submit">カレンダーを作成</button>
             </form>
         </div>
