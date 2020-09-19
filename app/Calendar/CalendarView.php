@@ -87,11 +87,11 @@ class CalendarView
                 } else {
                     //日にちを入れる
                     $target = date("Y-m-d", mktime(0, 0, 0, $month, $day, $year));
-                    $this->html .= "<div class=\"form-group\">";
-                    $this->html .= "<td>
+                    $this->html .= "<td><div class=\"form-group\"><div class=\"record__radio\">
                                     <input type=\"radio\" class=\"form-control\" name=\"date\" id=\"date". $day ."\" value=\"". $target ."\">
                                     <label for=\"date". $day ."\" class=\"day\">" . $day . "</label>
-                                    <br>";
+                                    </div>
+                                    </div><br>";
                     foreach ($this->records as $record) {
                         if ($record->date == $target) {
                             if ($record->done) {

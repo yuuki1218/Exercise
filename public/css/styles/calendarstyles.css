@@ -11505,6 +11505,13 @@ a {
   transition: 0.3s;
 }
 
+.record__radio > input:checked + label {
+  color: blue;
+  box-shadow: 0 5px 3px -3px #1221777a;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
 .record__form-item {
   flex-basis: 25%;
 }
@@ -11526,6 +11533,11 @@ a {
 .record__create-btn {
   margin-top: 24px;
   padding: 0px 15px;
+}
+
+.day {
+  font-size: 15px;
+  padding: 0 0px 0 4px;
 }
 
 @media (min-width: 960px) {
