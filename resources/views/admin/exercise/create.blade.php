@@ -29,6 +29,9 @@
                         <div class="habits-create__create-btn">
                             <input type="submit" class="btn btn-primary btn-lg" value="習慣の作成">
                         </div>
+                        <div class="habits__btn">
+                            <a href="{{ route('exercise.index') }}" class="btn btn-primary">戻る</a>
+                        </div>
                     </div>
                 </form>
             </div>

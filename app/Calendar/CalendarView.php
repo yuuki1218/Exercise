@@ -86,17 +86,28 @@ class CalendarView
                     $this->html .= "<td class=\"day-blank\">&nbsp;</td>";
                 } else {
                     //日にちを入れる
-                    $this->html .= "<td><span class=\"day\">" . $day . "</span><br>";
                     $target = date("Y-m-d", mktime(0, 0, 0, $month, $day, $year));
+                    $this->html .= "<div class=\"form-group\">";
+                    $this->html .= "<td>
+                                    <input type=\"radio\" class=\"form-control\" name=\"date\" id=\"date". $day ."\" value=\"". $target ."\">
+                                    <label for=\"date". $day ."\" class=\"day\">" . $day . "</label>
+                                    <br>";
                     foreach ($this->records as $record) {
                         if ($record->date == $target) {
-                            $this->html .= "<a href=\"".route('record.edit', ['record' => $record->id]) ."\">";
-                            $this->html .= "<p class=\"done\">" . $record->done . "</p>";
-                            $this->html .= "</a>";
+                            if ($record->done) {
+                                $this->html .= "<a href=\"".route('record.edit', ['record' => $record->id]) ."\">";
+                                $this->html .= "<i class=\"fas fa-star\"" . $record->done . "</i>";
+                                $this->html .= "</a>";
+                            } else {
+                                $this->html .= "<a href=\"".route('record.edit', ['record' => $record->id]) ."\">";
+                                $this->html .= "<i class=\"fas fa-times\"" . $record->done . "</i>";
+                                $this->html .= "</a>";
+                            }
                             break;
                         }
                     }
                     $this->html .= "</td>";
+                    $this->html .= "</div>";
                 }
                 $day++;
             }

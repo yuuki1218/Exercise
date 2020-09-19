@@ -29,8 +29,8 @@
                                 value="{{ $exercise->name }}">
                         </div>
                         <div class="habits-create__btn-inner">
-                            <div class="habits-create__create-btn">
-                                <input type="submit" class="btn btn-primary btn-lg" value="編集">
+                            <div class="habits-create__edit-btn">
+                                <input type="submit" class="btn btn-secondary btn-lg" value="編集">
                             </div>
 
                             <form action="{{ route('exercise.destroy', ['exercise' => $exercise->id]) }}" method="POST"
@@ -41,6 +41,9 @@
                                 <div class="habits-create__delete-btn">
                                     <button class="btn btn-danger">削除</button>
                                 </div>
+                        </div>
+                        <div class="habits__btn">
+                            <a href="{{ route('exercise.index') }}" class="btn btn-primary">戻る</a>
                         </div>
                 </form>
             </div>

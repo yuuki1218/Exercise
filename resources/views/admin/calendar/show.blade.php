@@ -7,7 +7,7 @@
         <div class="goal__inner">
             <div class="goal__items">
                 <div class="goal__item">
-                    <p class="goal__info-text">行いたい習慣：</p><span class="goal__text">{{ $calendar->title }}</span>
+                    <p class="goal__info-text">行いたい習慣：</p><span class="goal__text">{{ $calendar->exercise_name }}</span>
                 </div>
                 <div class="goal__item">
                     <p class="goal__info-text">目標：</p><span class="goal__text">{{ $calendar->goal }}</span>
@@ -24,15 +24,15 @@
     </section>
 
     {{-- カレンダー表示 --}}
-    <section class="calendar">
-        <div>{!! $calendar_tag !!}</div>
-    </section>
+    <form action="{{ route('record.calendar', ['calendarId' => $calendar->id]) }}" method="POST"
+        enctype="multipart/form-data">
+        @csrf
+        <section class="calendar">
+            <div>{!! $calendar_tag !!}</div>
+        </section>
 
-    <!-- 記録入力フォーム -->
-    <section class="record">
-        <form action="{{ route('record.calendar', ['calendarId' => $calendar->id]) }}" method="POST"
-            enctype="multipart/form-data">
-            @csrf
+        <!-- 記録入力フォーム -->
+        <section class="record">
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -68,28 +68,12 @@
                 </div>
                 <div class="record__form-item">
                     <div class="form-group">
-                        <label for="date" class="record__item-name">日付</label>
-                        <div class="record__date-form">
-                            <input type="text" name="date" id="date" class="form-control" value="{{ old('date') }}">
-                        </div>
-                    </div>
-                </div>
-                <div class="record__form-item">
-                    <div class="form-group">
                         <div class="record__create-btn">
                             <input type="submit" class="form-control" value="登録">
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
+    </form>
     </section>
-    <script>
-        $(function() {
-            $("#date").datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-        });
-
-    </script>
 @endsection
