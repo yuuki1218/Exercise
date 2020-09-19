@@ -20,7 +20,7 @@
                     @endforeach
                 </div>
                 <div class="habits__btn">
-                    <a href="{{ route('calendar.create') }}" class="btn btn-primary">戻る</a>
+                    <button onclick="history.back()" class="btn btn-primary">戻る</button>
                 </div>
             </div>
         </div>

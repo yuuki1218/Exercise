@@ -11285,6 +11285,25 @@ a {
   border-bottom: 1px solid #00000040;
 }
 
+.habits-create__text-form:focus {
+  outline: none;
+  -webkit-animation-name: kf-border-color;
+          animation-name: kf-border-color;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  border-bottom: 1px solid #0026fc;
+}
+
 .habits-create__btn-inner {
   display: flex;
   justify-content: flex-end;
@@ -11293,10 +11312,35 @@ a {
 
 .habits-create__create-btn {
   margin-right: 17px;
+  text-align: end;
 }
 
 .habits-create__delete-btn {
   margin-top: 5px;
+}
+
+@-webkit-keyframes kf-border-color {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes kf-border-color {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
 }
 
 @media (min-width: 960px) {

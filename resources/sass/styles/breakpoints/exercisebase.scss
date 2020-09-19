@@ -99,6 +99,11 @@ a {
         padding: 4px;
         border: none;
         border-bottom: 1px solid #00000040;
+        &:focus {
+            outline: none;
+            @include animation($name: kf-border-color, $duration: 0.3s);
+            border-bottom: 1px solid rgba(0, 38, 252);
+        }
     }
 
     &__btn-inner {
@@ -108,9 +113,22 @@ a {
     }
     &__create-btn {
         margin-right: 17px;
+        text-align: end;
     }
 
     &__delete-btn {
         margin-top: 5px;
+    }
+}
+
+@keyframes kf-border-color {
+    0% {
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform-origin: left;
+        transform: scaleX(1);
     }
 }

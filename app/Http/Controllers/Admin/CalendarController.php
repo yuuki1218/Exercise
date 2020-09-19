@@ -89,7 +89,11 @@ class CalendarController extends Controller
     public function edit($calendarId)
     {
         $calendarItem = Calendar::findOrFail($calendarId);
-        return view('admin.calendar.edit', ['calendarItem' => $calendarItem]);
+        $exercises = Exercise::all();
+        return view('admin.calendar.edit', [
+            'calendarItem' => $calendarItem,
+            'exercises' => $exercises
+        ]);
     }
 
     /**
@@ -102,7 +106,7 @@ class CalendarController extends Controller
     public function update(Request $request, $calendarId)
     {
         $calendarItem = Calendar::findOrFail($calendarId);
-        $calendarItem->exercise_name = $request->exercise()->name;
+        $calendarItem->exercise_name = $request->input('exercise_name');
         $calendarItem->line = $request->input('line');
         $calendarItem->lowest_line = $request->input('lowest_line');
         $calendarItem->goal = $request->input('goal');
