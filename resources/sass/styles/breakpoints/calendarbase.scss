@@ -348,3 +348,63 @@ a {
     font-size: 15px;
     padding: 0 0px 0 4px;
 }
+
+.record-edit {
+    &__content-title {
+        letter-spacing: 7px;
+        border-bottom: 2px solid;
+        text-align: center;
+        margin-bottom: 52px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        color: #3f51b5;
+    }
+    &__message {
+        font-size: 13px;
+    }
+    &__radio-button {
+        display: flex;
+        justify-content: space-around;
+        font-size: 17px;
+    }
+    &__submit-button {
+        margin-top: 21px;
+
+        & .form-control {
+            color: white;
+            background-color: #3737e4;
+        }
+    }
+    &__delete-button {
+        margin-top: 13px;
+
+        & .form-control {
+            color: white;
+            background-color: red;
+        }
+    }
+
+    &__back-button {
+        margin-top: 25px;
+        text-align: right;
+    }
+
+    &__radio-button {
+        & .form-group {
+            & > input:checked ~ div.record-edit__icon-star {
+                color: rgb(241, 238, 20);
+                transition: 0.3s;
+            }
+            & > input:checked ~ div.record-edit__icon-times {
+                color: red;
+                transition: 0.3s;
+            }
+            & > input:checked + label {
+                color: blue;
+                box-shadow: 0 5px 3px -3px #1221777a;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+        }
+    }
+}

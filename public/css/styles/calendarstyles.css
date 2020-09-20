@@ -11540,6 +11540,66 @@ a {
   padding: 0 0px 0 4px;
 }
 
+.record-edit__content-title {
+  letter-spacing: 7px;
+  border-bottom: 2px solid;
+  text-align: center;
+  margin-bottom: 52px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #3f51b5;
+}
+
+.record-edit__message {
+  font-size: 13px;
+}
+
+.record-edit__radio-button {
+  display: flex;
+  justify-content: space-around;
+  font-size: 17px;
+}
+
+.record-edit__submit-button {
+  margin-top: 21px;
+}
+
+.record-edit__submit-button .form-control {
+  color: white;
+  background-color: #3737e4;
+}
+
+.record-edit__delete-button {
+  margin-top: 13px;
+}
+
+.record-edit__delete-button .form-control {
+  color: white;
+  background-color: red;
+}
+
+.record-edit__back-button {
+  margin-top: 25px;
+  text-align: right;
+}
+
+.record-edit__radio-button .form-group > input:checked ~ div.record-edit__icon-star {
+  color: #f1ee14;
+  transition: 0.3s;
+}
+
+.record-edit__radio-button .form-group > input:checked ~ div.record-edit__icon-times {
+  color: red;
+  transition: 0.3s;
+}
+
+.record-edit__radio-button .form-group > input:checked + label {
+  color: blue;
+  box-shadow: 0 5px 3px -3px #1221777a;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
 @media (min-width: 960px) {
   .font-sm,
   .header__li {

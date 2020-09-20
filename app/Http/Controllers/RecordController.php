@@ -66,7 +66,8 @@ class RecordController extends Controller
     public function edit($recordId)
     {
         $record = Record::findOrFail($recordId);
-        return view('admin.record.edit', ['record' => $record]);
+        $date = $record->date;
+        return view('admin.record.edit', ['record' => $record, 'date' => $date]);
     }
 
     /**
@@ -76,7 +77,7 @@ class RecordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $recordId)
+    public function update(RecordRules $request, $recordId)
     {
         $record = Record::findOrFail($recordId);
         $record->done = $request->input('done');
