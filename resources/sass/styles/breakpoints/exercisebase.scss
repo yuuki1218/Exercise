@@ -58,11 +58,11 @@ a {
         letter-spacing: 5px;
         color: #3f51b5;
     }
-    &__inner {
-        display: flex;
-        justify-content: start;
-        flex-direction: column;
-    }
+    // &__inner {
+    //     display: flex;
+    //     justify-content: start;
+    //     flex-direction: column;
+    // }
 
     &__item {
         border-bottom: 2px solid;
@@ -86,6 +86,15 @@ a {
 .habits-create {
     &__container {
         @extend .conten-width;
+    }
+    &__content-title {
+        letter-spacing: 7px;
+        border-bottom: 2px solid;
+        text-align: center;
+        margin-bottom: 52px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        color: #3f51b5;
     }
 
     &__form {

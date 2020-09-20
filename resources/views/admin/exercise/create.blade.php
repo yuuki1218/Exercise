@@ -3,9 +3,7 @@
 @section('title', '習慣の作成')
     <section class="habits">
         <div class="habits__container">
-            <div class="habits__inner">
-                <h1 class="habits__content-title">習慣の作成</h1>
-            </div>
+            <h1 class="habits__content-title">習慣の作成</h1>
         </div>
         <div class="habits-create">
             <div class="habits-create__container">

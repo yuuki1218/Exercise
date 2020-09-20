@@ -11251,12 +11251,6 @@ a {
   color: #3f51b5;
 }
 
-.habits__inner {
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-}
-
 .habits__item {
   border-bottom: 2px solid;
   margin-bottom: 24px;
@@ -11272,6 +11266,16 @@ a {
 
 .habits__btn {
   text-align: right;
+}
+
+.habits-create__content-title {
+  letter-spacing: 7px;
+  border-bottom: 2px solid;
+  text-align: center;
+  margin-bottom: 52px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #3f51b5;
 }
 
 .habits-create__form .form-group {
