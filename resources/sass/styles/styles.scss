@@ -8,6 +8,7 @@
 @import "modules/mixin";
 
 //view
+@import "breakpoints/formbase.scss";
 @import "breakpoints/base";
 @media (min-width: 960px) {
     @import "breakpoints/960up";
