@@ -11455,6 +11455,14 @@ a {
   margin-top: 5px;
 }
 
+.calendar .fa-star {
+  color: #f1ee14;
+}
+
+.calendar .fa-times {
+  color: red;
+}
+
 .goal {
   padding: 16px 0 0 0;
 }
