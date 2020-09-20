@@ -22,7 +22,9 @@
                     @endforeach
                 </div>
                 <div class="habits__btn">
-                    <button onclick="history.back()" class="btn btn-primary">戻る</button>
+                    <form action="{{ route('calendar.create.exercise', ['userId' => Auth::user()->id]) }}">
+                        <button class="btn btn-primary btn-lg" type="submit">戻る</button>
+                    </form>
                 </div>
             </div>
         </div>

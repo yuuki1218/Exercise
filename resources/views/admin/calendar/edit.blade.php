@@ -24,12 +24,7 @@
                 <small id="exercise-nameHelp" class="form-text text-muted calendar-create__help ">行いたい習慣を選択してください。</small>
                 <div class="calendar-create__exercise-choice">
                     <div class="calendar-create__chioce-inner">
-                        <div class="calendar-create__exercise-items link">
-                            <div class="calendar-create__exercise-form-link">
-                                <a href="{{ route('exercise.index') }}" class="calendar-create__exercise-link"><i
-                                        class="fas fa-cogs"></i></a>
-                            </div>
-                        </div>
+
                         @foreach ($exercises as $exercise)
                             @if ($exercise->user_id === Auth::user()->id)
                                 <div class="calendar-create__exercise-items">
