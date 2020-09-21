@@ -11035,7 +11035,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #1b85dad9;
+  background-color: #eeeaea;
 }
 
 .title .cover-slide.inview::after {
@@ -11382,9 +11382,30 @@ a {
     padding-bottom: 150px !important;
   }
 
+  .title__inner {
+    position: relative;
+  }
+
   .title__main-title {
+    color: white;
     margin: 29px 0;
     font-size: 3rem;
+    position: absolute;
+    top: 0;
+    left: 107px;
+  }
+
+  .title__sub-title-area {
+    position: absolute;
+    bottom: 0;
+    background-color: #00000085;
+    width: 100%;
+    color: white;
+    padding-top: 30px;
+  }
+
+  .title__sub-title {
+    margin-left: 41px;
   }
 }
 

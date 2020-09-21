@@ -78,10 +78,12 @@
                             </div>
                         </div>
                         <h2 class="title__main-title">One Step</h2>
-                        <p class="title__sub-title">【One Step】は毎日の運動の記録をつけて習慣化出来るアプリです。<br>
-                            記録はカレンダーに登録していき、毎日継続できているか確認出来るようにしておきます。</p>
-                        <p>習慣化する事で自然と健康的な身体を手に入れることが出来ますよ。<br>
-                            初めは少ない時間から始めて、慣れてきたら項目を増やして色々な運動を試していきましょう！</p>
+                        <div class="title__sub-title-area ">
+                                <p class="title__sub-title">【One Step】は毎日の運動の記録をつけて習慣化出来るアプリです。<br>
+                                    記録はカレンダーに登録していき、毎日継続できているか確認出来るようにしておきます。</p>
+                                <p class="title__sub-title">習慣化する事で自然と健康的な身体を手に入れることが出来ますよ。<br>
+                                    初めは少ない時間から始めて、慣れてきたら項目を増やして色々な運動を試していきましょう！</p>
+                        </div>
                     </div>
                     <div class="title__guest-login-button">
                         <a class="btn btn-success btn-lg" href="{{ route('guest.login') }}">ゲストログイン</a>

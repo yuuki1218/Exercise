@@ -68,7 +68,7 @@
                                 class="form-text text-muted calendar-create__help">達成したい目標を設定してください。</small>
                         </div>
                         <div class="calendar-create__btn-inner">
-                            <div class="exit-button">
+                            <div class="calendar-create__exit-button">
                                 <a href="{{ route('calendar.index') }}">
                                     <button type="button" class="btn btn-primary">戻る</button>
                                 </a>

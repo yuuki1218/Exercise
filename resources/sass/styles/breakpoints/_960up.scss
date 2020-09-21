@@ -26,8 +26,29 @@
 // }
 
 .title {
+    &__inner {
+        position: relative;
+    }
+
     &__main-title {
+        color: white;
         margin: 29px 0;
         font-size: 3rem;
+        position: absolute;
+        top: 0;
+        left: 107px;
+    }
+
+    &__sub-title-area {
+        position: absolute;
+        bottom: 0;
+        background-color: #00000085;
+        width: 100%;
+        color: white;
+        padding-top: 30px;
+    }
+
+    &__sub-title {
+        margin-left: 41px;
     }
 }

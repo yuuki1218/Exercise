@@ -69,7 +69,7 @@
                 <div class="record__form-item">
                     <div class="form-group">
                         <div class="record__create-btn">
-                            <input type="submit" class="form-control" value="登録">
+                            <input type="submit" class="form-control btn btn-primary" value="登録">
                         </div>
                     </div>
                 </div>

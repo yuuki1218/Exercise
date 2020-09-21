@@ -46,7 +46,7 @@ input[type="radio"] {
     display: none;
 }
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     list-style: none;
 }
 
@@ -126,6 +126,7 @@ a {
 }
 
 .habits {
+    @extend .conten-width;
     &__content-title {
         letter-spacing: 7px;
         border-bottom: 2px solid;
@@ -161,6 +162,8 @@ a {
 
 //作成画面
 .calendar-create {
+    @extend .conten-width;
+    padding: 30px 0 0 0;
     &__form {
         max-width: 1070px;
 
@@ -173,9 +176,13 @@ a {
         }
     }
     &__content-title {
-        text-align: center;
+        letter-spacing: 7px;
         border-bottom: 2px solid;
-        margin-bottom: 17px;
+        text-align: center;
+        margin-bottom: 52px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        color: #3f51b5;
     }
 
     &__title {
@@ -224,6 +231,9 @@ a {
             color: #fff;
             transition: 0.4s;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        &__goal-create {
+            @extend .conten-width;
         }
     }
 
