@@ -11343,6 +11343,10 @@ a {
   font-weight: bold;
 }
 
+.habits__title {
+  color: #000;
+}
+
 .habits__btn {
   display: flex;
 }
