@@ -8,9 +8,9 @@
             @foreach ($calendars as $calendar)
                 @if ($calendar->user_id === Auth::user()->id)
                     <div class="habits__items">
-                        <div class="habits__title">
+                        <div class="habits__box">
                             <a class="habits__link" href="{{ route('calendar.show', ['calendar' => $calendar->id]) }}">
-                                <p class="habits__title">{{ $calendar->exercise_name }}</p>
+                                <p class="habits__title slide-bg"><span></span>{{ $calendar->exercise_name }}</p>
                             </a>
                         </div>
                         <div class="habits__btn">

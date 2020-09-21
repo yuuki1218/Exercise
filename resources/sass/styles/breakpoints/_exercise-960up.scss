@@ -1,0 +1,40 @@
+.habits {
+    &__content-title {
+        font-size: 50px;
+        letter-spacing: 25px;
+    }
+
+    &__item {
+        margin-bottom: 35px;
+    }
+
+    &__item-name {
+        font-size: 24px;
+    }
+
+    & .btn {
+        font-size: 18px;
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: 0.4s;
+        }
+    }
+}
+
+.habits-create {
+    &__item-name {
+        font-size: 31px;
+        letter-spacing: 25px;
+    }
+
+    &__text-form {
+        font-size: 20px;
+    }
+    &__create-btn {
+        margin: 43px 0;
+    }
+
+    &__edit-btn {
+        margin-top: 3px;
+    }
+}

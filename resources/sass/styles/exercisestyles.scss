@@ -9,7 +9,7 @@
 
 //view
 @import "breakpoints/base";
-@import "breakpoints/exercisebase.scss";
+@import "breakpoints/exercisebase";
 @media (min-width: 960px) {
-    @import "breakpoints/960up";
+    @import "breakpoints/exercise-960up";
 }

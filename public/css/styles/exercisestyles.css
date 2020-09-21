@@ -10935,6 +10935,7 @@ body {
 
 .conten-width,
 .habits-create__container,
+.habits__container,
 .information__inner,
 .title__inner,
 .header__inner {
@@ -11213,6 +11214,7 @@ body {
 
 .conten-width,
 .habits-create__container,
+.habits__container,
 .header__inner,
 .title__inner,
 .information__inner {
@@ -11357,55 +11359,43 @@ a {
 }
 
 @media (min-width: 960px) {
-  .font-sm,
-  .header__li {
-    font-size: 16px;
+  .habits__content-title {
+    font-size: 50px;
+    letter-spacing: 25px;
   }
 
-  .font-md {
-    font-size: 19px;
+  .habits__item {
+    margin-bottom: 35px;
   }
 
-  .font-lr {
-    font-size: 23px;
+  .habits__item-name {
+    font-size: 24px;
   }
 
-  .font-lg {
-    font-size: 36px;
+  .habits .btn {
+    font-size: 18px;
   }
 
-  .mb-lg {
-    margin-bottom: 150px !important;
+  .habits .btn:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
   }
 
-  .pb-lg {
-    padding-bottom: 150px !important;
+  .habits-create__item-name {
+    font-size: 31px;
+    letter-spacing: 25px;
   }
 
-  .title__inner {
-    position: relative;
+  .habits-create__text-form {
+    font-size: 20px;
   }
 
-  .title__main-title {
-    color: white;
-    margin: 29px 0;
-    font-size: 3rem;
-    position: absolute;
-    top: 0;
-    left: 107px;
+  .habits-create__create-btn {
+    margin: 43px 0;
   }
 
-  .title__sub-title-area {
-    position: absolute;
-    bottom: 0;
-    background-color: #00000085;
-    width: 100%;
-    color: white;
-    padding-top: 30px;
-  }
-
-  .title__sub-title {
-    margin-left: 41px;
+  .habits-create__edit-btn {
+    margin-top: 3px;
   }
 }
 

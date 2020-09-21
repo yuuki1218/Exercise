@@ -11336,7 +11336,7 @@ a {
   justify-content: space-between;
 }
 
-.habits__title {
+.habits__box {
   margin: 0 28px 22px 0;
   font-size: 15px;
   color: black;
@@ -11641,14 +11641,52 @@ a {
     margin-bottom: 87px;
   }
 
+  .habits__box {
+    width: 100%;
+    margin-right: 0;
+  }
+
   .habits__title {
     font-size: 32px;
-    color: black;
     font-weight: bold;
     flex-basis: 100%;
     text-align: center;
     margin: 0;
     margin-bottom: 25px;
+    padding: 37px 0;
+    color: #fff;
+    background-color: #03a9f4;
+    box-shadow: 0 0 10px black;
+    border-color: black;
+    border-radius: 7px;
+  }
+
+  .habits__title.slide-bg {
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+  }
+
+  .habits__title.slide-bg span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    box-shadow: #fff;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    z-index: -1;
+  }
+
+  .habits__title.slide-bg:hover {
+    color: #000;
+  }
+
+  .habits__title.slide-bg:hover span {
+    transform: none;
   }
 
   .habits__btn {

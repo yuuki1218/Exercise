@@ -49,6 +49,9 @@ a {
 
 //習慣の一覧画面
 .habits {
+    &__container {
+        @extend .conten-width;
+    }
     &__content-title {
         letter-spacing: 7px;
         border-bottom: 2px solid;
