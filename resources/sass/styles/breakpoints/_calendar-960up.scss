@@ -249,3 +249,59 @@
         }
     }
 }
+
+.record-edit {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1070px;
+
+    &__message {
+        font-size: 25px;
+    }
+    &__content-title {
+        font-size: 50px;
+    }
+
+    &__record-name {
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    &__icon-star {
+        font-size: 45px;
+    }
+
+    &__icon-times {
+        font-size: 45px;
+    }
+
+    & .form-control {
+        font-size: 23px;
+    }
+
+    &__submit-button {
+        margin: 27px auto;
+        width: 50%;
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: 0.4s;
+        }
+    }
+
+    &__delete-button {
+        margin: 0 auto;
+        width: 50%;
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: 0.4s;
+        }
+    }
+
+    & .btn-primary {
+        font-size: 18px;
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: 0.4s;
+        }
+    }
+}

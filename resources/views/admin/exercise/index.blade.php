@@ -3,7 +3,7 @@
 @section('title', '習慣の一覧')
     <section class="habits">
         <div class="habits__container">
-            <h1 class="habits__content-title">習慣の一覧</h1>
+            <h1 class="habits__content-title">Task一覧</h1>
             <div class="habits__inner">
                 <div class="habits__items">
                     <a href="{{ route('exercise.create') }}" class="habits__item-link">

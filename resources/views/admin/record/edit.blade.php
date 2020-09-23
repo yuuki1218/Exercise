@@ -22,15 +22,15 @@
                 <p class="record-edit__message">習慣は行いましたか？</p>
                 <div class="record-edit__radio-button">
                     <div class="form-group">
-                        <input type="radio" name="done" id="done" class="form-control" value="1"><label
-                            for="done">完了</label>
+                        <input type="radio" name="done" id="done" class="form-control" value="1"><label for="done"
+                            class="record-edit__record-name">完了</label>
                         <div class="record-edit__icon-star">
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="radio" name="done" id="failed" class="form-control" value="0"><label
-                            for="failed">休憩</label>
+                        <input type="radio" name="done" id="failed" class="form-control" value="0"><label for="failed"
+                            class="record-edit__record-name">休憩</label>
                         <div class="record-edit__icon-times">
                             <i class="fas fa-times"></i>
                         </div>

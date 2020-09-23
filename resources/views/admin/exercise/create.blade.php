@@ -3,7 +3,7 @@
 @section('title', '習慣の作成')
     <section class="habits">
         <div class="habits__container">
-            <h1 class="habits__content-title">習慣の作成</h1>
+            <h1 class="habits__content-title">Taskの作成</h1>
         </div>
         <div class="habits-create">
             <div class="habits-create__container">
@@ -20,12 +20,12 @@
                     @endif
                     <div class="habits-create__form">
                         <div class="form-group">
-                            <label for="name" class="habits-create__item-name">習慣</label>
+                            <label for="name" class="habits-create__item-name">Task</label>
                             <input class="habits-create__text-form" type="text" name="name" id="name"
                                 value="{{ old('name') }}">
                         </div>
                         <div class="habits-create__create-btn">
-                            <input type="submit" class="btn btn-primary btn-lg" value="習慣の作成">
+                            <input type="submit" class="btn btn-primary btn-lg" value="Taskの作成">
                         </div>
                         <div class="habits__btn">
                             <a href="{{ route('exercise.index') }}" class="btn btn-primary">戻る</a>

@@ -3,7 +3,7 @@
 @section('title', '習慣の選択画面')
     {{-- 習慣の選択画面表示 --}}
     <section class="habits">
-        <h1 class="habits__content-title">習慣の選択画面</h1>
+        <h1 class="habits__content-title">Daily Task</h1>
         <div class="habits__inner">
             @foreach ($calendars as $calendar)
                 @if ($calendar->user_id === Auth::user()->id)
@@ -31,7 +31,7 @@
         </div>
         <div class="calendar-create__button">
             <form action="{{ route('calendar.create.exercise', ['userId' => Auth::user()->id]) }}">
-                <button class="btn calendar-create__btn btn-primary btn-lg" type="submit">カレンダーを作成</button>
+                <button class="btn calendar-create__btn btn-primary btn-lg" type="submit">Taskを作成</button>
             </form>
         </div>
     </section>

@@ -11883,5 +11883,65 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: 0.4s;
   }
+
+  .record-edit {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1070px;
+  }
+
+  .record-edit__message {
+    font-size: 25px;
+  }
+
+  .record-edit__content-title {
+    font-size: 50px;
+  }
+
+  .record-edit__record-name {
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .record-edit__icon-star {
+    font-size: 45px;
+  }
+
+  .record-edit__icon-times {
+    font-size: 45px;
+  }
+
+  .record-edit .form-control {
+    font-size: 23px;
+  }
+
+  .record-edit__submit-button {
+    margin: 27px auto;
+    width: 50%;
+  }
+
+  .record-edit__submit-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+  }
+
+  .record-edit__delete-button {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .record-edit__delete-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+  }
+
+  .record-edit .btn-primary {
+    font-size: 18px;
+  }
+
+  .record-edit .btn-primary:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+  }
 }
 

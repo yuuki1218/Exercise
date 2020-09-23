@@ -3,7 +3,7 @@
 @section('title', 'カレンダー作成')
     <section class="calendar-create">
         <div class="calendar-create__inner">
-            <h1 class="calendar-create__content-title">カレンダー作成画面</h1>
+            <h1 class="calendar-create__content-title">Task作成画面</h1>
             <p class="calendar-create__comment">それぞれ設定をして記録を付けるカレンダーを作成しましょう！</p>
         </div>
         <div class="calendar-create__form">
@@ -77,7 +77,7 @@
                                 </a>
                             </div>
                             <div class="calendar-create__button">
-                                <button type="submit" class="btn btn-primary btn-lg">カレンダー作成</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Taskを作成する</button>
                             </div>
                         </div>
                     </div>

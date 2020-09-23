@@ -4,7 +4,7 @@
     <section class="habits">
         <div class="habits__container">
             <div class="habits__inner">
-                <h1 class="habits__content-title">習慣名の編集</h1>
+                <h1 class="habits__content-title">Taskの編集</h1>
             </div>
         </div>
         <div class="habits-create">
@@ -24,7 +24,7 @@
                     @endif
                     <div class="habits-create__form">
                         <div class="form-group">
-                            <label for="name" class="habits-create__item-name">習慣</label>
+                            <label for="name" class="habits-create__item-name">Task</label>
                             <input class="habits-create__text-form" type="text" name="name" id="name"
                                 value="{{ $exercise->name }}">
                         </div>
